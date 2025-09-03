@@ -8,27 +8,26 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 
-# 合并原dummy2_arm_config的安装规则
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/description/dummy2_arm_config/launch")
-  install(
-    DIRECTORY description/dummy2_arm_config/launch
-    DESTINATION share/${PROJECT_NAME}/launch
-    PATTERN "setup_assistant.launch" EXCLUDE)
-endif()
 
 install(DIRECTORY 
-  description 
-  launch 
+  description
+  DESTINATION share/${PROJECT_NAME}
+)
+
+
+install(DIRECTORY 
+  description/dummy2_dual_arm_config/config/
+  DESTINATION share/${PROJECT_NAME}/config
+)
+
+
+install(FILES 
+  description/dummy2_dual_arm_config/.setup_assistant
   DESTINATION share/${PROJECT_NAME}
 )
 
 install(DIRECTORY 
-  description/dummy2_arm_config/config/ 
-  DESTINATION share/${PROJECT_NAME}/config
-)
-
-install(FILES 
-  description/dummy2_arm_config/.setup_assistant 
+  launch
   DESTINATION share/${PROJECT_NAME}
 )
 
