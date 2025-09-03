@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: dual_arm_control
+    relative_path: description/simulation/dummy2/dummy2.urdf
+  srdf:
+    relative_path: config/dummy2-gripperv2.srdf
+  package_settings:
+    author_name: feng
+    author_email: dearronfeng0520@163.com
+    generated_timestamp: 1756869436
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
