@@ -4,25 +4,11 @@ moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControll
 
 moveit_simple_controller_manager:
   controller_names:
-    - dummy2_right_arm_controller
-    - dummy2_right_hand_controller
     - dummy2_left_arm_controller
     - dummy2_left_hand_controller
+    - dummy2_right_arm_controller
+    - dummy2_right_hands_controller
 
-  dummy2_right_arm_controller:
-    type: FollowJointTrajectory
-    joints:
-      - right_joint1
-      - right_joint2
-      - right_joint3
-      - right_joint4
-      - right_joint5
-  dummy2_right_hand_controller:
-    type: FollowJointTrajectory
-    joints:
-      - right_joint6
-      - right_figer1
-      - right_figer2
   dummy2_left_arm_controller:
     type: FollowJointTrajectory
     joints:
@@ -37,3 +23,19 @@ moveit_simple_controller_manager:
       - left_joint6
       - left_figer1
       - left_figer2
+  dummy2_right_arm_controller:
+    type: FollowJointTrajectory
+    joints:
+      - right_joint1
+      - right_joint2
+      - right_joint3
+      - right_joint4
+      - right_joint5
+    action_ns: follow_joint_trajectory
+    default: true
+  dummy2_right_hands_controller:
+    type: FollowJointTrajectory
+    joints:
+      - right_joint6
+      - right_figer1
+      - right_figer2

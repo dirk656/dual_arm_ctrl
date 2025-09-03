@@ -6,8 +6,8 @@ moveit_setup_assistant_config:
     relative_path: config/dummy2-dual-gripperv2.srdf
   package_settings:
     author_name: feng
-    author_email: dearronfeng0520@163.com
-    generated_timestamp: 1756895084
+    author_email: 1608749191@qq.com
+    generated_timestamp: 1756906857
   control_xacro:
     command:
       - position
